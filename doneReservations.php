@@ -30,27 +30,6 @@ $reservations = $controller->show();
 </head>
 <body>
     <?php
-    // $id = $_SESSION['id'];
-    //     $sql = "select * from reservations where user_id = '$id'";//id lazem yet8ayar
-    //     $result = mysqli_query($con,$sql);
-
-    //     if($result)
-    //     {
-    //         while($row = mysqli_fetch_assoc($result))
-    //         {
-    //         $id = $row['id'];
-    //         $start = $row['start_date'];
-    //         $end = $row['end_date'];
-    //         echo "
-    //         <a href = 'details.php?id=".$id."' class='card' id = 'card'>
-    //         <div class='card-body'>
-    //         <h5>3 Rooms, 4 Guests</h5>
-    //         <h5>$start - $end</h5>
-    //         </div>
-    //         </a>
-    //         ";
-    //         }
-    //     }
     foreach($reservations as $reservation){
         $guests = 0;
         foreach($reservation["rooms"] as $room){
